@@ -132,12 +132,10 @@ async def send_media_(c: Client, m: Message):
         await c.add_user_(m)
         await handle_fsub(c, m)
         return await m.reply(
-            f"**Mau kirim {'media' if not m.text else 'pesan'} kemana?**",
+            f"**kirim kemana {'media' if not m.text else 'pesan'} kemana?**",
             reply_markup=InlineKeyboardMarkup([
                 [
                     InlineKeyboardButton("Channel 1", "channel1"),
-                    InlineKeyboardButton("Channel 2", "channel2"),
-                    InlineKeyboardButton("Channel 3", "channel3"),
                 ]
             ]),
             quote=True
